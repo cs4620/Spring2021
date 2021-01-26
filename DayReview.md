@@ -51,5 +51,26 @@ This file contains links and text after every class that you can look back to an
 - Students are familiar with curves and surfaces in the context of modeling
 - Students are familiar with metaballs in the context of modeling.
 - Activity: Demonstrate subdivision surfaces, curves and surfaces, and metaballs
+
+## Day 5 - 2021-01-26
+ - Students understand it takes more time to rasterize triangles than it does no run a fragment shader
+ - Students understand the light bounces and what affects that has (the ceiling is not black)
+ - Students understand how ambient light is used to illuminate an object
+ - Students understand that light received is proportional to the normal of the surface and the direction to the light
+ - Students understand the sine function, and when to use it
+ - Students understand the cosine function, and when to use it
+ - Students understand than the atan function is faulty
+ - Students understand the correct use of the atan2 function.
+ - Students can explain what a point light is.
+ - Students can explain what a directional (sun) light is.
+ - Students can explain what a spot light is.
+ - Students can explain what an area light is.
+ - Students can describe the difference between hard and soft shadows
+ 
+## Day 6 - 2021-01-28
+ - Students understand how light reflects off a purely diffuse surface
+ - Students understand how light reflects off a purely reflective surface
+ - Student can calculate the angle of reflection given a right source and a normal
+ - Student undestand the conecpt behind Phong Shading.
 #
 https://www.youtube.com/embed/YZQn5ivP6to
