@@ -70,7 +70,11 @@ This file contains links and text after every class that you can look back to an
 ## Day 6 - 2021-01-28
  - Students understand how light reflects off a purely diffuse surface
  - Students understand how light reflects off a purely reflective surface
- - Student can calculate the angle of reflection given a right source and a normal
+ - Student can calculate the angle of reflection given a light source and a normal
  - Student undestand the conecpt behind Phong Shading.
+ - Students can explain sub-surface scattering
+ - 
+ 
+ 
 #
 https://www.youtube.com/embed/YZQn5ivP6to
