@@ -16,6 +16,7 @@ This file contains links and text after every class that you can look back to an
 - Activity: Basic controls in model space.
 
 ## Day 2 - 2021-01-24 - Representation of model space
+
 - Students can describe the major ways of modeling in model space
 - Student understand the importance of symmetry in modeling
 - Students can discuss the pulling and stretching approach to modeling
@@ -24,6 +25,7 @@ This file contains links and text after every class that you can look back to an
 - Activity: Model a Tie Fighter
 
 ## Day 3 - 2021-01-19 - Vertices
+
 - Students can describe how a location in space is represented as a column vector (x,y,z,w).
 - Students understand the difference between left and right handed coordinate systems.
 - Students understand the difference between a vectex (location in space) and a vector (direction)
@@ -34,6 +36,7 @@ This file contains links and text after every class that you can look back to an
 - Activity: Model starting with a vertex.
 
 ## Day 4 - 2021-01-21
+
 - Students understand the different ways of defining a line.
 - Students can solve for ```ax+by+c=0``` given two points
 - Students can explain what the tangent of a line is
@@ -53,28 +56,40 @@ This file contains links and text after every class that you can look back to an
 - Activity: Demonstrate subdivision surfaces, curves and surfaces, and metaballs
 
 ## Day 5 - 2021-01-26
- - Students understand it takes more time to rasterize triangles than it does no run a fragment shader
- - Students understand the light bounces and what affects that has (the ceiling is not black)
- - Students understand how ambient light is used to illuminate an object
- - Students understand that light received is proportional to the normal of the surface and the direction to the light
- - Students understand the sine function, and when to use it
- - Students understand the cosine function, and when to use it
- - Students understand than the atan function is faulty
- - Students understand the correct use of the atan2 function.
- - Students can explain what a point light is.
- - Students can explain what a directional (sun) light is.
- - Students can explain what a spot light is.
- - Students can explain what an area light is.
- - Students can describe the difference between hard and soft shadows
- 
+
+- Students understand it takes more time to rasterize triangles than it does no run a fragment shader
+- Students understand the light bounces and what affects that has (the ceiling is not black)
+- Students understand how ambient light is used to illuminate an object
+- Students understand that light received is proportional to the normal of the surface and the direction to the light
+- Students understand the sine function, and when to use it
+- Students understand the cosine function, and when to use it
+- Students understand than the atan function is faulty
+- Students understand the correct use of the atan2 function.
+- Students can explain what a point light is.
+- Students can explain what a directional (sun) light is.
+- Students can explain what a spot light is.
+- Students can explain what an area light is.
+- Students can describe the difference between hard and soft shadows
+
 ## Day 6 - 2021-01-28
- - Students understand how light reflects off a purely diffuse surface
- - Students understand how light reflects off a purely reflective surface
- - Student can calculate the angle of reflection given a light source and a normal
- - Student undestand the conecpt behind Phong Shading.
- - Students can explain sub-surface scattering
- - 
- 
- 
+
+- Students understand how light reflects off a purely diffuse surface
+- Students understand how light reflects off a purely reflective surface
+- Student can calculate the angle of reflection given a light source and a normal
+- Student undestand the conecpt behind Phong Shading.
+- Students can explain sub-surface scattering
+
+## Day 7 - 2021-02-02
+
+- Students are famiiliar with the UV coordinate system
+- Students understand how UV coordinates map a 2D image onto a 3D mesh.
+- Students understand how changing UV coordinates affects an object's appearance
+- Students are familiar with basic projection operators (cube, cylinder, sphere)
+- Students are familiar with dynanmic remeshing (sculpting tools)
+- Students understand the power-of-two convention in image map sizes
+- Activity: Compare UV mapping to wrapping presents
+- Activity: Review various map projections, https://bl.ocks.org/syntagmatic/ba569633d51ebec6ec6e
+
+
 #
 https://www.youtube.com/embed/YZQn5ivP6to
