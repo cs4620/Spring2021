@@ -90,6 +90,14 @@ This file contains links and text after every class that you can look back to an
 - Activity: Compare UV mapping to wrapping presents
 - Activity: Review various map projections, https://bl.ocks.org/syntagmatic/ba569633d51ebec6ec6e
 
-
+## Day 8 - 2021-02-04
+- Students will understand the difference between rendering on the GPU and raytracing
+- Students will have a basic understanding of the difference between biased and unbiased rendering
+- Students will understand the role of a virtual camera in rendering
+- Students will understand the role of baking in a graphics pipeline
+- Students can explain why baking speeds up render times
+- Students can list some of the image textures that could be baked
+- Students have a basic understanding of ambient occlusion
+- Students have a basic understanding of how normal maps are encoded.
 #
 https://www.youtube.com/embed/YZQn5ivP6to
