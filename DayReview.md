@@ -99,5 +99,15 @@ This file contains links and text after every class that you can look back to an
 - Students can list some of the image textures that could be baked
 - Students have a basic understanding of ambient occlusion
 - Students have a basic understanding of how normal maps are encoded.
+
+## Day 9 - 2021-02-9
+- Students will be able to describe at a high level the history of hand-animation
+- Students will know the role of key frames in traditional animation
+- Students will know the role of "tweening" in traditional animaiton
+- Students will understand the role of a dope sheet in traditonal animation
+- Students will be able to use key frames in 3D animaiton
+- Students will be able setup tweening in 3D animation
+- Students will be able to read and use a "graphs" view for key frame animation.
+- Students can describe how animaiton can be pakcaged into "actions" for reuse
 #
 https://www.youtube.com/embed/YZQn5ivP6to
