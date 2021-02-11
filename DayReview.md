@@ -107,7 +107,14 @@ This file contains links and text after every class that you can look back to an
 - Students will understand the role of a dope sheet in traditonal animation
 - Students will be able to use key frames in 3D animaiton
 - Students will be able setup tweening in 3D animation
-- Students will be able to read and use a "graphs" view for key frame animation.
+- Students will be able to read a "graphs" view for key frame animation.
 - Students can describe how animaiton can be pakcaged into "actions" for reuse
+
+## Day 10 - 2021-02-11
+- Students will be able to describe the motion of an object using keyframe
+- Students will be able to animate an object using f-curves
+- Students will understand how an object can follow a curve for animation
+- Students will understand how use constraints in animation
+- Students will be able to animate a camera.
 #
 https://www.youtube.com/embed/YZQn5ivP6to
