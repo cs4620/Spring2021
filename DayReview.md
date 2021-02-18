@@ -118,3 +118,17 @@ This file contains links and text after every class that you can look back to an
 - Students will be able to animate a camera.
 #
 https://www.youtube.com/embed/YZQn5ivP6to
+
+## Day11 - Class cancelled due to weather.
+
+## Day12 2021-02-18
+- Students will be able explain the role of rigging in animation
+- Students can explain the difference between rigid body and soft body animation
+- Students can identify instances of rigid body and soft body animation in film
+- Students understand the role of an individual bone in a rig
+- Students can create an armature with multiple bones
+- Students understand the role of constraints on bones
+- Students can explain at a high level what inverse kinematics are
+- Students can explain the basic layout of a traditional human skeleton in animation.
+- Activity: Look for rigid and soft body animation in a Pixar clip.
+
