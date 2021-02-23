@@ -119,9 +119,9 @@ This file contains links and text after every class that you can look back to an
 #
 https://www.youtube.com/embed/YZQn5ivP6to
 
-## Day11 - Class cancelled due to weather.
+## Day 11 - Class cancelled due to weather.
 
-## Day12 2021-02-18
+## Day 12 2021-02-18
 - Students will be able explain the role of rigging in animation
 - Students can explain the difference between rigid body and soft body animation
 - Students can identify instances of rigid body and soft body animation in film
@@ -131,4 +131,14 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students can explain at a high level what inverse kinematics are
 - Students can explain the basic layout of a traditional human skeleton in animation.
 - Activity: Look for rigid and soft body animation in a Pixar clip.
+
+## Day 13 2021-02-23
+- Students can explain what motion blur is
+- Students can give an example of an effects technique that does not have motion blur (stop animation).
+- Students can explain the pros and cons of "Go Motion"
+- Students understand the advantage of computer animation in terms of motion blur.
+- Students can explain ways in which motion blur is produced
+- Students understand soft-body animation
+- Students understand how weights affect the animation of a soft body
+- Students can explain how to adjust weight using weight painting.
 
