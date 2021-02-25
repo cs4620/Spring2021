@@ -142,3 +142,14 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students understand how weights affect the animation of a soft body
 - Students can explain how to adjust weight using weight painting.
 
+## Day 14 20202-02-25
+- Students can explain some of the unique features of the human eye (rods, cones, lens, etc.)
+- Students understand the difference between forward and backward ray tracing.
+- Students can explain why forward ray tracing is better than purely backward ray tracing
+- Students can talk about the difference between biased and unbiased rendering (including path tracing)
+- Students can list the benefits of using a ray tracer.
+- Students can list the problems with ray tracing (specifically speed).
+- Students can explain at a high level how data structures can speed up ray tracing.
+- Students understand that commercial renderers can us both the GPU and ray tracing.
+- Students understand the input that a ray tracer needs.
+- Students can explain the high-level steps of a ray tracer.
