@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+
+        let objString = `v -1.000000 0.000000 1.000000
+v 1.000000 0.000000 1.000000
+v 1.000000 0.000000 -1.000000
+vt 0.000000 0.000000
+vt 1.000000 0.000000
+vt 1.000000 1.000000
+vn 0.0000 1.0000 0.0000
+f 1/1/1 2/2/1 3/3/1 
+`
+
+        let vertices = [];
+        let uvs = [];
+        let normals = [];
+        let faces = []
+
+        let objSplits = objString.split("\n");
+        for (let objLine of objSplits) {
+            console.log(objLine);
+            if (objLine[0] == 'v') {
+                if (objLine[1] == ' ') {
+                    let lineValues = objLine.split(' ');
+                    let vertex = {
+                        x: +lineValues[1],
+                        y: +lineValues[2],
+                        z: +lineValues[3],
+                    }
+                    vertices.push(vertex);
+                }
+                if (objLine[1] == 't') {
+                    let lineValues = objLine.split(' ');
+                    let uv = {
+                        u: +lineValues[1],
+                        v: +lineValues[2],
+                    }
+                    uvs.push(uv);
+                }
+                if (objLine[1] == 'n') {
+                    let lineValues = objLine.split(' ');
+                    let normal = {
+                        x: +lineValues[1],
+                        y: +lineValues[2],
+                        z: +lineValues[3],
+                    }
+                    normals.push(normal);
+
+                }
+            }
+            else if (objLine[0] == 'f') {
+                let lineValues = objLine.split(' ');
+                objVertices = []
+                for (let i = 1; i < 4; i++) {
+                    objVertices.push(lineValues[i].split('/'))
+                }
+                let face =
+                {
+                    vertex: vertices[+(objVertices[0][0]) - 1],
+                    uv: uvs[+(objVertices[0][1]) - 1],
+                    normal: normals[+(objVertices[0][2]) - 1],
+                }
+                faces.push(face)
+
+
+            }
+        }
+        console.log(vertices)
+        console.log(uvs)
+        console.log(normals)
+        console.log(faces)
+
+
+    </script>
+</body>
+
+</html>
