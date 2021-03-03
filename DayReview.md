@@ -142,7 +142,7 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students understand how weights affect the animation of a soft body
 - Students can explain how to adjust weight using weight painting.
 
-## Day 14 20202-02-25
+## Day 14 2021-02-25
 - Students can explain some of the unique features of the human eye (rods, cones, lens, etc.)
 - Students understand the difference between forward and backward ray tracing.
 - Students can explain why forward ray tracing is better than purely backward ray tracing
@@ -153,3 +153,10 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students understand that commercial renderers can us both the GPU and ray tracing.
 - Students understand the input that a ray tracer needs.
 - Students can explain the high-level steps of a ray tracer.
+
+# Day15 - 2021-03-02
+- Students will understand the basic history of graphics file formats
+- Students can explain the pros and cons of the obj format
+- Students can explain the pros and cons of the fbx format
+- Students can parse a obj file
+- Students are familiar with winding order.
