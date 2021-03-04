@@ -154,9 +154,12 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students understand the input that a ray tracer needs.
 - Students can explain the high-level steps of a ray tracer.
 
-# Day15 - 2021-03-02
+# Day 15 - 2021-03-02
 - Students will understand the basic history of graphics file formats
 - Students can explain the pros and cons of the obj format
 - Students can explain the pros and cons of the fbx format
 - Students can parse a obj file
 - Students are familiar with winding order.
+
+# Day 16 - 2021-03-04
+- Example Website:https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/implementing-the-raytracing-algorithm
