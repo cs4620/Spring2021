@@ -162,4 +162,11 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students are familiar with winding order.
 
 # Day 16 - 2021-03-04
-- Example Website:https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/implementing-the-raytracing-algorithm
+- Example Website: https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/implementing-the-raytracing-algorithm
+- Students can explain the difference between an orthographic projection and a perspective projection
+- Students can identify the prespective type (orthographic or perspective) when looking at an image
+- Students understand what a field of view is and the two ways to represent a FOV (half or full angle)
+- Students can calculate how large an object would appear at a given distance due to perspective
+- Students understand the law of similar triangles
+- Students can calculate the location of pixels on a 2D camera
+- Students can find the height of the image plane given camera parameters.
