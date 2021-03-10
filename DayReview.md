@@ -170,3 +170,12 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students understand the law of similar triangles
 - Students can calculate the location of pixels on a 2D camera
 - Students can find the height of the image plane given camera parameters.
+
+# Day 17 - 2021-03-09
+- Students understand the importance of precision in ray tracing
+- Students will be able to create a test framework for their ray tracer
+- Students will understand the different uses of a Vector3 object (vector, position, color).
+- Students will understand the basic operations on a Vector3 (length, scale, addition, subtraction)
+- Students will understand how the term ray differs from the mathematical definition of a ray (ray tracing rays are finite-line segments with direction)
+- Students will understand what it means to normalize a ray.
+
