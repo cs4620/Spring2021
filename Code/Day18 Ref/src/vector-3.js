@@ -78,13 +78,20 @@ class Vector3{
         return vector;
     }
     dot(other){
-        
+        return this.x*other.x+this.y*other.y+this.z*other.z;
     }
     static dot(one, two){
-        
+        return one.x*two.x+one.y*two.y+one.z*two.z;
     }
     cross(other){
-       
+        let _x, _y, _z;
+        _x = this.v[y]*other.v[z] - this.v[z]*other.v[y];
+        _y = this.v[z]*other.v[x] - this.v[x]*other.v[z];
+        _z = this.v[x]*other.v[y] - this.v[y]*other.v[x];
+        this.v[x] = _x;
+        this.v[y] = _y;
+        this.v[z] = _z;
+        return this;
     }
     static cross(one, two){
         let vector = one.clone().cross(two);
