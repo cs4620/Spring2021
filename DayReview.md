@@ -179,3 +179,16 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students will understand how the term ray differs from the mathematical definition of a ray (ray tracing rays are finite-line segments with direction)
 - Students will understand what it means to normalize a ray.
 
+# Day 18 - 2021-03-11
+- Students can normalize a ray
+- Students understand how to calculate a dot product
+- Students understand how to calculate a cross product
+- Students understand that a dot product calculates a projection
+- Students understand that a dot product calculates a cosine angle
+- Students understand that the dot product of orthogonal vectors is always 0
+- Students understand that a cross product calculates an orthogonal vector
+- Students understand the Ax+By+Cz+D=0 form of a plane definitionn
+- Students can calculate A,B, and C from a normal vector
+- Students can calculate the value of D given A, B, and C
+- Students can use three points to calculate A, B, C, and D
+- Students can determine the distance between a ray and a plane.
