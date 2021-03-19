@@ -1,0 +1,99 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/grided/canvas.js"></script>
+  <!-- <script src="http://127.0.0.1:5501/canvas.js"></script> -->
+  <script>
+
+    const x = 0;
+    const y = 1;
+
+
+    let t1 = [
+      [0, 0],
+      [0, 1],
+      [1, 0],
+    ]
+
+    let t1ReverseWinding = [
+      [0, 0],
+      [1, 0],
+      [0, 1],
+    ]
+
+    let t2 = [
+      [-2.3, -1],
+      [5.5, 5],
+      [6, -2]
+    ]
+
+
+    let triangles = [t1, t1ReverseWinding, t2];
+
+    let triangle = triangles[2]
+    let points = [
+      [.4, .4],
+      [-.1, .5],
+      [.5, -.1],
+    ]
+
+    function addPoints(size, offset) {
+      for (let x = -size; x <= size; x += offset) {
+        for (let y = -size; y <= size; y += offset) {
+          points.push([x, y]);
+        }
+      }
+    }
+
+    addPoints(10, .5);
+
+    const minus = (one, two) => [one[x] - two[x], one[y] - two[y]];
+    const minusNormalized = (one, two) => normalize([one[x] - two[x], one[y] - two[y]])
+    const normalize = vector => vector; //Update
+    const length = vector => 0 //Update;
+    const orthogonal = vector => vector //Update
+    const dot = (one, two) => 0 //Update
+    const scale = (vector, scaler) => [vector[x] * scaler, vector[y] * scaler]
+    const getC = (point, orthogonal) => 0 //Update
+
+
+
+    function isInTriangle(point) {
+      return false
+    }
+
+    function customBoot() {
+      cameraZoom = 100;
+      options.cameraZoomMin = 1000;
+    }
+
+    function customUpdate() {
+
+    }
+
+    function customDraw(ctx) {
+      ctx.strokeStyle = "blue"
+      ctx.beginPath()
+      ctx.moveTo(...triangle[0]);
+      ctx.lineTo(...triangle[1]);
+      ctx.lineTo(...triangle[2]);
+      ctx.closePath();
+      ctx.stroke()
+
+      for (let point of points) {
+        ctx.fillStyle = "orange"
+        if (!isInTriangle(point))
+          ctx.fillStyle = "gray"
+        ctx.beginPath()
+        ctx.arc(...point, .1, 0, 2 * Math.PI)
+        ctx.fill()
+      }
+    }
+  </script>
+</body>
+
+</html>
