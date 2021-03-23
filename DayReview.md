@@ -192,3 +192,17 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students can calculate the value of D given A, B, and C
 - Students can use three points to calculate A, B, C, and D
 - Students can determine the distance between a ray and a plane.
+
+[Spring Break]
+
+# Day 19 - 2021-03-23
+- Students can explain how triangle/ray collision tests have a 2D component even in 3D
+- At a high level, students can describe the inside test and the bayrcentric methods of 2D triangle/point collision tests
+- Students can derive the Ax+By+C=0 equation for all line segments of a triangle
+- Students can find the normalized tangent for all line segments of a triangle
+- Students can find the ortohgonal/normal vector for a line segment in 2D
+- Students can use the orthogonal vector to find A and B in Ax+By+C=0
+- Students can use a point on the line to solve for C in Ax+By+C = 0
+- Students can determine if a point is in a triangle using these tree line definitions
+- Students understand how the result of Ax+By+C indicates if a point is on the line, in front of the line, or behind the line
+- 
