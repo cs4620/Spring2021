@@ -205,4 +205,7 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students can use a point on the line to solve for C in Ax+By+C = 0
 - Students can determine if a point is in a triangle using these tree line definitions
 - Students understand how the result of Ax+By+C indicates if a point is on the line, in front of the line, or behind the line
-- 
+
+# Day 20 - 2021-03-25
+- Students can calculate by hand whether a point is inside an arbitrary triangle
+- Students write a function that determines whether a point is inside a triagle.
