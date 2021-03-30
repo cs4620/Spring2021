@@ -52,14 +52,7 @@ function init() {
 	controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 	//Create a camera made out of a cylinder
-	var geometry = new THREE.CylinderGeometry(.1, 1, .9, 4);
-	geometry.rotateY(Math.PI / 4);
-	geometry.rotateX(-Math.PI / 2)
-	var material = new THREE.MeshBasicMaterial({ color: 0x000000, wireframe: true });
-	var cylinder = new THREE.Mesh(geometry, material);
-	cylinder.position.set(0, 0, .45)
-	cylinder.lookAt(new THREE.Vector3(0, 0, 0));
-	scene.add(cylinder);
+	
 }
 
 init();
