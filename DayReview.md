@@ -209,3 +209,9 @@ https://www.youtube.com/embed/YZQn5ivP6to
 # Day 20 - 2021-03-25
 - Students can calculate by hand whether a point is inside an arbitrary triangle
 - Students write a function that determines whether a point is inside a triagle.
+
+# Day 21 - 2021-03-30
+- Students understand how to define a plane mathematically
+- Students can find the orthogonal vector to a plane
+- Students can find planes that run through points on a plane that is orthogonal to that plane
+- Students can use the inside/outside test with these planes to see if a point on a plane is inside a triangle.
