@@ -215,3 +215,13 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students can find the orthogonal vector to a plane
 - Students can find planes that run through points on a plane that is orthogonal to that plane
 - Students can use the inside/outside test with these planes to see if a point on a plane is inside a triangle.
+
+# Day 22 - 2021-04-05
+- Students will understand the minimum requirements for a trivial ray tracer (image, camera, geometry)
+- Students will be able to represent a camera in 3-space
+- Students will be able to represent a triangle in 3-space.
+- Students will be able to code a simple ray tracer
+- Students will be able to map pixels into world space.
+- Students will be able to get find the ABCD representation of a plane
+- Students will be able to find the collision point between a ray and plane
+- Students will be able to calculate if a point is inside a triangle on a plane
