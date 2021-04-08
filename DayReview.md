@@ -216,7 +216,7 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students can find planes that run through points on a plane that is orthogonal to that plane
 - Students can use the inside/outside test with these planes to see if a point on a plane is inside a triangle.
 
-# Day 22 - 2021-04-05
+# Day 22 - 2021-04-06
 - Students will understand the minimum requirements for a trivial ray tracer (image, camera, geometry)
 - Students will be able to represent a camera in 3-space
 - Students will be able to represent a triangle in 3-space.
@@ -225,3 +225,11 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students will be able to get find the ABCD representation of a plane
 - Students will be able to find the collision point between a ray and plane
 - Students will be able to calculate if a point is inside a triangle on a plane
+
+# Day 23 - 2021-04-08
+- Students will understand how to integrate multiple triangles into a ray tracer
+- Students will understand how to integrate simple lights into a ray tracer (i.e. directional lights)
+- Students will know how to calculatethe diffuse term in a shader
+- Students will understand the potential pitfalls with calculating the diffuse term (color inversion, overflow)
+- Students will know which parts of the ray tracing algorithm need to be looped for each triangle and those which do not
+- Students will know how to calculate the nearest triangle (lowest positive number)
