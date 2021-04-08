@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sun Example</title>
+</head>
+
+<body>
+
+  <script src="https://cdn.jsdelivr.net/npm/grided/canvas.js"></script>
+  <script>
+
+    let rotation = 0;
+    function customUpdate() {
+      rotation += .01;
+      if(rotation >= Math.PI/2)
+        rotation -= Math.PI;
+
+    }
+
+    let rays = 30;
+    let rayDistance= 5;
+
+    function customDraw(ctx) {
+      for(let i = 0; i < rays; i++){
+        let width = Math.cos(rotation);
+        let left = -width * 50
+        let right = width * 50;
+        let xStart = -(rays/2*rayDistance);
+        let x = xStart + i*rayDistance;
+        let color = "orange";
+        if(x < left || x > right) color = "gray";
+        ctx.strokeStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(x, 100);
+        ctx.lineTo(x,0)
+        ctx.stroke();
+
+      }
+      ctx.save();
+      ctx.rotate(rotation);
+      ctx.strokeStyle = "black"
+      ctx.beginPath();
+      ctx.moveTo(-50,0);
+      ctx.lineTo(50,0);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
