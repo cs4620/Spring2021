@@ -3,10 +3,13 @@
 
 <head>
     <title>Ray Tracer 2.0</title>
+    <style>body{margin:0}</style>
 </head>
 
 <body>
     <script type="module">
+        document.body.addEventListener("mousemove", (event)=>console.log(event.clientX + " " + event.clientY))
+
         let start = performance.now();
         import sphere from "./sphere.obj.js"
 
@@ -27,7 +30,7 @@
         const perp = (v1, v2) => normalize(cross(v1, v2))
         const toPlane = arr => {
             let tangents = [subtract(arr[1], arr[0]), subtract(arr[2], arr[1]), subtract(arr[0], arr[2])]
-            let abc = normalize(perp(tangents[1], tangents[0]))
+            let abc = normalize(perp(tangents[0], tangents[1]))
             let d = -dot(abc, arr[0])
             return { abc, d };
         }
@@ -51,10 +54,11 @@
         let directionalLight = normalize(vector3(0, 0, 1))
         const shaderGenerator = (color) =>
             function (worldSpace, normal, uvs) {
-                let angle = dot(normal, directionalLight);
-                if (angle < 0) {
-                    angle = dot(scale(normal, -1), directionalLight)
-                }
+                let angle;
+                 angle = dot(normal, directionalLight);
+                // if (angle < 0) {
+                 //   angle = dot(scale(normal, -1), directionalLight)
+                // }
                 let diffuse = scale(color, angle);
                 return clamp(add(ambient, diffuse));
             }
@@ -87,7 +91,9 @@
             }
             triangles.push(triangle);
         }
-        triangles = triangles.slice(0, 0 + 400);
+        //triangles = triangles.slice(0, 0 + 400);
+        //triangles = triangles.slice(0, 0 + 6);
+        //triangles = [triangles[0], triangles[1], triangles[2], triangles[3], triangles[4], triangles[5]]//, triangles[5]]
 
 
 
@@ -140,6 +146,8 @@
         }
 
 
+        //296/204
+
         for (let x = 0; x < width; x++) {
 
             if (x % 20 == 0) console.log(x)
@@ -149,6 +157,8 @@
 
             for (let y = 0; y < height; y++) {
                 //Where is this pixel in world space
+                if(x == 296 && y == 204)
+                    console.log("break")
                 let percentY = y / height;
                 let offsetY = percentY * 2 - 1
 
@@ -167,7 +177,7 @@
 
                     let T = triangleNumerators[i] / (dot(plane.abc, rayDirection))
                     if (nearestDistance < T) {
-                        break;
+                        continue;
                     }
 
                     let collision = add(rayOrigin, scale(rayDirection, T));
@@ -205,7 +215,7 @@
                 else {
                     ctx.fillStyle = `rgb(${nearestColor.x}, ${nearestColor.y}, ${nearestColor.z})`
                 }
-                ctx.fillRect(x, y, 1, 1)
+                ctx.fillRect(x, height-y-1, 1, 1)
             }
         }
 
