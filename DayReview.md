@@ -233,3 +233,9 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students will understand the potential pitfalls with calculating the diffuse term (color inversion, overflow)
 - Students will know which parts of the ray tracing algorithm need to be looped for each triangle and those which do not
 - Students will know how to calculate the nearest triangle (lowest positive number)
+
+# Day 24 - 2021-04-13
+- Students will understand gimble lock (choose between two up axes)
+- Students will know how to find the right vector from a camera origin, lookAt and up vector.
+- Students will be able to reconstruct a camera with orthogonal axes 
+- Students will know how to adjust for an image's aspect ratio while ray tracing.
