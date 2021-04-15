@@ -239,3 +239,9 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students will know how to find the right vector from a camera origin, lookAt and up vector.
 - Students will be able to reconstruct a camera with orthogonal axes 
 - Students will know how to adjust for an image's aspect ratio while ray tracing.
+
+# Day 25 - 2021-04-15
+- Students will understand how to combine an obj parser with a ray tracer
+- Students will understand different approaches to debugging a ray tracer
+- Students will recognize repeated computations that can be cached while ray tracing
+- Students will understand how to encapsulate their ray cast call to make shadow and reflection rays.
