@@ -67,8 +67,14 @@
 			new THREE.Vector3(0, 0, -6)
 		);
 
-		let triangles = [triangle1, triangle2, triangle3];
-		let triangle = triangles[0];
+		let triangle4 = new Triangle(
+			new THREE.Vector3(-1, 0, 1),
+			new THREE.Vector3(1,0,0),
+			new THREE.Vector3(-1,0,-1)
+		);
+
+		let triangles = [triangle1, triangle2, triangle3, triangle4];
+		let triangle = triangles[3];
 
 		let p1;
 		let p2;
@@ -209,7 +215,7 @@
 				let name = names[i];
 				let element = document.getElementById(name + "CheckBox");
 
-				scene.getObjectByName(name).visible = element.checked;//ok
+				scene.getObjectByName(name).visible = element.checked;
 			}
 			
 

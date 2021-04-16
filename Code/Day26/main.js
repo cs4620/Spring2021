@@ -2,6 +2,7 @@
 import sphere from "./sphere.obj.js"
 import plane from "./plane.obj.js"
 import triangle from "./triangle.obj.js"
+import smallPlane from "./small-plane.obj.js"
 import * as math from "./math.js"
 import parseOBJ from "./parse-obj.js"
 
@@ -15,24 +16,26 @@ export default function main(document) {
 
   const shaderGenerator = (color) =>
     function (worldSpace, normal, uvs, shadowed = false) {
-      if (shadowed) return ambient;
+      let amb = scale(directMultiply(ambient, color), 1/(255));
+      if (shadowed) return amb;
       let angle;
       angle = dot(normal, directionalLight);
       if (angle < 0) angle = 0;
       let diffuse = scale(color, angle);
-      return clamp(add(ambient, diffuse));
+      return clamp(add(amb, diffuse));
     }
 
   let triangles = [
-    //...parseOBJ(sphere, shaderGenerator(vector3(0, 255, 0)), vector3(-2, 2, -5)),
     //...parseOBJ(sphere, shaderGenerator(vector3(255, 255, 0)), vector3(2, 0, 0)),
-    ...parseOBJ(plane, shaderGenerator(vector3(255, 255, 255)), vector3(0, -1, 0)),
-    ...parseOBJ(triangle, shaderGenerator(vector3(0, 255, 255)), vector3(0, 1, -5)),
+    ...parseOBJ(plane, shaderGenerator(vector3(255, 255, 255)), vector3(0, -2, 0)),
+    ...parseOBJ(smallPlane, shaderGenerator(vector3(255, 0, 255)), vector3(0, -1, 0)),
+    //...parseOBJ(sphere, shaderGenerator(vector3(0, 255, 0)), vector3(-2, 2, -5)),
+    //...parseOBJ(triangle, shaderGenerator(vector3(0, 255, 255)), vector3(0, 1, -5)),
 
   ];
 
   let camera = {
-    origin: vector3(0, 0, 4),
+    origin: vector3(0, 0, 10),
     lookAt: vector3(0, 0, 0),
     up: vector3(0, 1, 0),
     right: vector3(1, 0, 0),
@@ -78,19 +81,27 @@ export default function main(document) {
   }
 
   function castRay(rayOrigin, rayDirection, depth) {
-    if(depth == 0) return {nearestDistance: Number.MAX_SAFE_INTEGER, nearestColor: vector3(0,0,0)}
+    if (depth == 0) return { nearestDistance: Number.MAX_SAFE_INTEGER, nearestColor: vector3(0, 0, 0) }
     let nearestDistance = Number.MAX_SAFE_INTEGER;
     let nearestColor;
     for (let i = 0; i < triangles.length; i++) {
       let triangle = triangles[i]
       let plane = trianglePlanes[i];
-      let T = triangleNumerators[i] / (dot(plane.abc, rayDirection))
+      let numerator = triangleNumerators[i];
+      if(true){
+        numerator = - dot(plane.abc, rayOrigin)-plane.d;
+      }
+      let T = numerator / (dot(plane.abc, rayDirection))
       if (nearestDistance < T || T == Number.MAX_SAFE_INTEGER || T < 0) {
         continue;
       }
 
       let collision = add(rayOrigin, scale(rayDirection, T));
-     
+      // if (Math.abs(collision.x) < .1 && Math.abs(collision.y - -2) < .1 && Math.abs(collision.z) < .1)
+      //   console.log("Hi")
+      // if (Math.random() > .99 && collision.y == -2)
+      //   console.log(collision.x + " " + collision.y + " " + collision.z)
+
 
       let planes = [];
       let offsets = [];
@@ -111,10 +122,10 @@ export default function main(document) {
 
       if (minimum > 0) {
         if (T > 0 && T < nearestDistance) {
-          if( depth == 2 && i == 2)
-          console.log("break")
+          if (depth == 2 && i == 2)
+            console.log("break")
           nearestDistance = T
-          let shadowDistance = castRay(add(collision, scale(directionalLight, .1)), directionalLight, depth-1).nearestDistance;
+          let shadowDistance = castRay(add(collision, scale(directionalLight, .001)), directionalLight, depth - 1).nearestDistance;
           let shadowed = shadowDistance < Number.MAX_SAFE_INTEGER;
 
           nearestColor = triangle.shader(collision, plane.abc, vector3(0, 0, 0), shadowed)
@@ -133,7 +144,7 @@ export default function main(document) {
 
     for (let y = 0; y < height; y++) {
       //Where is this pixel in world space
-      if (x == 296 && y == 204)
+      if (x == 240 && y == 172)
         console.log("break")
       let percentY = y / height;
       let offsetY = percentY * 2 - 1
@@ -151,6 +162,8 @@ export default function main(document) {
         //Send out a shadow ray
         ctx.fillStyle = `rgb(${nearestColor.x}, ${nearestColor.y}, ${nearestColor.z})`
       }
+      if (x == 240 && y == 172)
+        ctx.fillStyle = "magenta"
       ctx.fillRect(x, height - y - 1, 1, 1)
     }
   }

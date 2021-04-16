@@ -1,3 +1,10 @@
 {
-  "esversion":7
+  "esversion":6,
+  "globals":{
+    "performance":true,
+    "globalThis":true,
+    "normalize":true,
+    "vector3":true
+  },
+  "asi":true
 }
