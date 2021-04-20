@@ -1,8 +1,11 @@
 "use strict"
+//List of objects we can use in your ray tracer
 import sphere from "./sphere.obj.js"
 import plane from "./plane.obj.js"
 import triangle from "./triangle.obj.js"
 import smallPlane from "./small-plane.obj.js"
+
+//Support code
 import * as math from "./math.js"
 import parseOBJ from "./parse-obj.js"
 
@@ -26,11 +29,11 @@ export default function main(document) {
     }
 
   let triangles = [
-    //...parseOBJ(sphere, shaderGenerator(vector3(255, 255, 0)), vector3(2, 0, 0)),
+    ...parseOBJ(sphere, shaderGenerator(vector3(255, 255, 0)), vector3(2, 0, 0)),
     ...parseOBJ(plane, shaderGenerator(vector3(255, 255, 255)), vector3(0, -2, 0)),
     ...parseOBJ(smallPlane, shaderGenerator(vector3(255, 0, 255)), vector3(0, -1, 0)),
-    //...parseOBJ(sphere, shaderGenerator(vector3(0, 255, 0)), vector3(-2, 2, -5)),
-    //...parseOBJ(triangle, shaderGenerator(vector3(0, 255, 255)), vector3(0, 1, -5)),
+    ...parseOBJ(sphere, shaderGenerator(vector3(0, 255, 0)), vector3(-2, 2, -5)),
+    ...parseOBJ(triangle, shaderGenerator(vector3(0, 255, 255)), vector3(0, 1, -5)),
 
   ];
 
@@ -88,7 +91,7 @@ export default function main(document) {
       let triangle = triangles[i]
       let plane = trianglePlanes[i];
       let numerator = triangleNumerators[i];
-      if(true){
+      if(depth!=2){
         numerator = - dot(plane.abc, rayOrigin)-plane.d;
       }
       let T = numerator / (dot(plane.abc, rayDirection))
