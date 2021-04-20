@@ -23,7 +23,7 @@ export default function main(document) {
   //A simple shader generator
   const shaderGenerator = (color) =>
     function (worldSpace, normal, uvs, shadowed = false) {
-      let amb = scale(directMultiply(ambient, color), 1/(255));
+      let amb = scale(directMultiply(ambient, color), 1 / (255));
       if (shadowed) return amb;
       let angle;
       angle = dot(normal, directionalLight);
@@ -32,7 +32,7 @@ export default function main(document) {
       return clamp(add(amb, diffuse));
     }
 
-    //Pairs of object/shaders that will be rendered.
+  //Pairs of object/shaders that will be rendered.
   let triangles = [
     ...parseOBJ(sphere, shaderGenerator(vector3(255, 255, 0)), vector3(2, 0, 0)),
     ...parseOBJ(plane, shaderGenerator(vector3(255, 255, 255)), vector3(0, -2, 0)),
@@ -108,9 +108,9 @@ export default function main(document) {
 
       //For camera rays, we can use cached values for the numerator
       let numerator = triangleNumerators[i];
-      if(depth!=2){
+      if (depth != 2) {
         //For other rays, we have to calculate it for each ray cast
-        numerator = - dot(plane.abc, rayOrigin)-plane.d;
+        numerator = - dot(plane.abc, rayOrigin) - plane.d;
       }
 
       let T = numerator / (dot(plane.abc, rayDirection))
@@ -121,7 +121,7 @@ export default function main(document) {
 
       //Calculate the world space location of the collision
       let collision = add(rayOrigin, scale(rayDirection, T));
-      
+
       //Compare the collision point to the containing planes to see if we are inside the triangle
       let planes = [];
       let offsets = [];
@@ -176,21 +176,38 @@ export default function main(document) {
       //Where is the pixel in world Space?
       let screenSpacePixel = add(rightVector, scale(cameraUp, offsetY * screenHalfWidth))
 
-      //What is the direction of the ray?
-      let rayDirection = normalize(subtract(screenSpacePixel, rayOrigin))
+      let allColors = [];
+      let sampleCount = 1;
+      let halfPixelHeight= screenHalfWidth / (height/2);
+      let halfPixelWidth = screenHalfWidth /(width/2);
+      for (let i = 0; i < sampleCount; i++) {
+      let jitterX = Math.random() * 2 - 1;
+      let jitterY = Math.random() * 2 - 1;
+      let jitterScale = 0;
+      let jitterPixel = screenSpacePixel
 
-      //Get the nearest color
-      let { T, nearestColor } = castRay(rayOrigin, rayDirection, 2);
+        //What is the direction of the ray?
+        // let rayDirection = normalize(subtract(jitterPixel, rayOrigin))
+        let rayDirection = normalize(subtract(screenSpacePixel, rayOrigin))
 
-      if (!nearestColor) {
-        //We didn't hit anything
-        //Show the background color
-        ctx.fillStyle = "black"
+        //Get the nearest color
+        let { T, nearestColor } = castRay(rayOrigin, rayDirection, 2);
+
+        if (!nearestColor) {
+          //We didn't hit anything
+          //Show the background color
+          //ctx.fillStyle = "black"
+          allColors.push(vector3(0, 0, 0))
+        }
+        else {
+          //We hit something, update the stored colors
+          // ctx.fillStyle = `rgb(${nearestColor.x}, ${nearestColor.y}, ${nearestColor.z})`
+          allColors.push(vector3(nearestColor.x, nearestColor.y, nearestColor.z))
+        }
       }
-      else {
-        //We hit something, update the stored colors
-        ctx.fillStyle = `rgb(${nearestColor.x}, ${nearestColor.y}, ${nearestColor.z})`
-      }
+      let sumColors = allColors.reduce((a, b) => add(a, b), vector3(0, 0, 0))
+      let finalColor = scale(sumColors, 1 / sampleCount);
+      ctx.fillStyle = `rgb(${finalColor.x}, ${finalColor.y}, ${finalColor.z})`
       //Fill the pixel with its color, but flip so y is down.
       ctx.fillRect(x, height - y - 1, 1, 1)
     }

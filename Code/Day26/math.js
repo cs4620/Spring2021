@@ -20,6 +20,7 @@ const toPlane = arr => {
 const clampOne = f => Math.min(255, Math.max(0, f))
 const clamp = v => vector3(clampOne(v.x), clampOne(v.y), clampOne(v.z))
 const directMultiply = (one, two) => vector3(one.x * two.x, one.y*two.y, one.z*two.z)
+const equals = (one, two) => one.x == two.x && one.y == two.y && one.z == two.z;
 
 export {
   vector3StringArray,
@@ -38,5 +39,6 @@ export {
   toPlane,
   clampOne,
   clamp,
-  directMultiply
+  directMultiply,
+  equals
 }
