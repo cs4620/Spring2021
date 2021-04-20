@@ -1,9 +1,9 @@
 "use strict"
 //List of objects we can use in your ray tracer
-import sphere from "./sphere.obj.js"
-import plane from "./plane.obj.js"
-import triangle from "./triangle.obj.js"
-import smallPlane from "./small-plane.obj.js"
+import sphere from "./objects/sphere.obj.js"
+import plane from "./objects/plane.obj.js"
+import triangle from "./objects/triangle.obj.js"
+import smallPlane from "./objects/small-plane.obj.js"
 
 //Support code
 import * as math from "./math.js"
