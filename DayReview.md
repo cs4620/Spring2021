@@ -245,3 +245,12 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students will understand different approaches to debugging a ray tracer
 - Students will recognize repeated computations that can be cached while ray tracing
 - Students will understand how to encapsulate their ray cast call to make shadow and reflection rays.
+
+# Day 25 - 2021-04-20
+- Students will understand what aliasing is
+- Students can explain how to remove aliasing by rendering at a larger resolution
+- Students can explain how to remove aliasing by taking multiple samples per pixel
+- Students will have a basic understanding of eye anatomy, including the poisson distribution of cones
+- Students will understand the massively parallel nature of GPUs
+- Students will be familiar with vertex shaders
+- Students will be familiar with fragment shaders
