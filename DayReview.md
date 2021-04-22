@@ -254,3 +254,12 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students will understand the massively parallel nature of GPUs
 - Students will be familiar with vertex shaders
 - Students will be familiar with fragment shaders
+
+# Day 26 - 2021-04-22
+- Students will understand the GPU pipeline
+- Students will understand Z Buffering
+- Students will understand screen tearing and how to resolve it (double buffering)
+- Students will understand Z thrashing and how to resolve it (z hinting)
+- Students will have a basic understandnig of GPU syntax
+- Students will understand the role of decorators in GPU syntax
+- Students will understand swizzling in a GPU shader.
