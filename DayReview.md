@@ -263,3 +263,11 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students will have a basic understandnig of GPU syntax
 - Students will understand the role of decorators in GPU syntax
 - Students will understand swizzling in a GPU shader.
+
+# Day 27 - 2021-04-27
+- Students will understand which variables are passed to a vertext shader before any frames.
+- Students will understand which variables are passed to a vertext shader frame-by-frame.
+- Students will understand which variables are passed to a frament shader frame-by frame.
+- Students will understand how to pass data between the vertex shader and the fragment shader.
+- Students can explain how normals are treated differently than vertices in a vertex shader (no translation, no world to camera matrix)
+- Students will understand how to calculate diffuse lighting in a fragment shader.
