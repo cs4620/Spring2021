@@ -16,7 +16,7 @@ Distorted Vertices - http://shaderfrog.com/app/view/3159
 
 Spiked Vertices - http://shaderfrog.com/app/view/3219
 
-Christmas Ornament - http://shaderfrog.com/app/view/3219
+Christmas Ornament - http://shaderfrog.com/app/view/3221
 
 ## Examples of GFX
 https://www.youtube.com/watch_popup?v=Z9d1bkRC0Hs
