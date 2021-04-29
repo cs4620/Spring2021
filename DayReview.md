@@ -271,3 +271,10 @@ https://www.youtube.com/embed/YZQn5ivP6to
 - Students will understand how to pass data between the vertex shader and the fragment shader.
 - Students can explain how normals are treated differently than vertices in a vertex shader (no translation, no world to camera matrix)
 - Students will understand how to calculate diffuse lighting in a fragment shader.
+
+# Day 29 - 2021-04-29
+- Students will understand how to implement a spot ligth on a GPU
+- Students will understand how to pass world position data from a vertex shaders to a fragment shader
+- Students will understand how to pass uv data from the vertex shaders to the fragment shader.
+- Students will understand how to deform geometry in a vertex shader.
+- Students will understand how to add textures in a frament shader.
